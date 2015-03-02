@@ -1,0 +1,59 @@
+﻿<Window x:Class="Krang.Client.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="600"
+        Width="1000"
+        Title="Krang">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Add torrent file..." cal:Message.Attach="ShowAddTorrentFileAsync" />
+                <Separator />
+                <MenuItem Header="Exit" />
+            </MenuItem>
+        </Menu>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            
+            <ListView ItemsSource="{Binding Torrents}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="250" Header="Name" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Width="100" Header="Size" DisplayMemberBinding="{Binding Size}" />
+                        <GridViewColumn Width="200" Header="Progress" x:Name="TorrentProgress">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ProgressBar Maximum="1" Value="{Binding Progress}" Height="15" Width="{Binding ElementName=TorrentProgress, Path=Width}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="80" Header="Seeds" DisplayMemberBinding="{Binding Seeds}" />
+                        <GridViewColumn Width="80" Header="Peers" DisplayMemberBinding="{Binding Peers}" />
+                        <GridViewColumn Width="100" Header="Down Speed" DisplayMemberBinding="{Binding DownloadRate}" />
+                        <GridViewColumn Width="100" Header="Up Speed" DisplayMemberBinding="{Binding UploadRate}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+            <TabControl Grid.Row="1">
+                <TabItem Header="General" >
+                </TabItem>
+                
+                <TabItem Header="Files">
+                </TabItem>
+                
+                <TabItem Header="Peers">
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </DockPanel>
+</Window>

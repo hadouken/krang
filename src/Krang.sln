@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krang.Client", "Krang.Client\Krang.Client.csproj", "{2C563AC1-F2A2-4D71-A554-8E28B7D787E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krang", "Krang\Krang.csproj", "{C661DB9C-5AA9-4012-ACC9-37B85BA90397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C563AC1-F2A2-4D71-A554-8E28B7D787E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C563AC1-F2A2-4D71-A554-8E28B7D787E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C563AC1-F2A2-4D71-A554-8E28B7D787E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C563AC1-F2A2-4D71-A554-8E28B7D787E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C661DB9C-5AA9-4012-ACC9-37B85BA90397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C661DB9C-5AA9-4012-ACC9-37B85BA90397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C661DB9C-5AA9-4012-ACC9-37B85BA90397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C661DB9C-5AA9-4012-ACC9-37B85BA90397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
