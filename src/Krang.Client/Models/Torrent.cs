@@ -12,6 +12,8 @@ namespace Krang.Client.Models
         private int _uploadRate;
         private int _seeds;
         private int _peers;
+        private long _totalSize;
+        private TorrentState _state;
 
         [JsonProperty("name")]
         public string Name
@@ -93,6 +95,30 @@ namespace Krang.Client.Models
             {
                 if (value == _peers) return;
                 _peers = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        [JsonProperty("totalSize")]
+        public long TotalSize
+        {
+            get { return _totalSize; }
+            set
+            {
+                if (value == _totalSize) return;
+                _totalSize = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        [JsonProperty("state")]
+        public TorrentState State
+        {
+            get { return _state; }
+            set
+            {
+                if (value == _state) return;
+                _state = value;
                 NotifyOfPropertyChange();
             }
         }

@@ -73,6 +73,9 @@
   <ItemGroup>
     <Compile Include="KrangBootstrapper.cs" />
     <Compile Include="Models\Torrent.cs" />
+    <Compile Include="Models\TorrentState.cs" />
+    <Compile Include="Presentation\LongToFileSizeConverter.cs" />
+    <Compile Include="Presentation\LongToSpeedConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
